@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisualEffectViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arry_sozai_0014" translatesAutoresizingMaskIntoConstraints="NO" id="tK4-W0-J4H">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4x-bX-VnC">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="p6n-Mv-cap"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="13f-6d-xor" kind="embed" id="K83-Os-iok"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="tK4-W0-J4H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="66i-Ar-VJx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tK4-W0-J4H" secondAttribute="bottom" id="Okc-z4-tJg"/>
+                            <constraint firstAttribute="centerY" secondItem="tK4-W0-J4H" secondAttribute="centerY" id="Pl1-Lj-OQe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N4x-bX-VnC" secondAttribute="bottom" id="Sd9-oz-4Md"/>
+                            <constraint firstItem="N4x-bX-VnC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Tvu-Vr-mdk"/>
+                            <constraint firstAttribute="centerX" secondItem="tK4-W0-J4H" secondAttribute="centerX" id="Uef-EM-Vyj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tK4-W0-J4H" secondAttribute="trailing" constant="-16" id="n0Q-Rl-YCO"/>
+                            <constraint firstItem="tK4-W0-J4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="pAz-G1-RAH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N4x-bX-VnC" secondAttribute="trailing" constant="-16" id="zFj-Ji-dvY"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sIi-rn-W2f" appends="YES" id="EX8-6S-9D0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="containerBottomConstraint" destination="Sd9-oz-4Md" id="F4i-49-h67"/>
+                        <outlet property="containerView" destination="N4x-bX-VnC" id="bc3-bQ-hpB"/>
+                        <outlet property="myImageView" destination="tK4-W0-J4H" id="7Le-vl-fV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sIi-rn-W2f">
+                    <connections>
+                        <action selector="viewTouched:" destination="BYZ-38-t0r" id="cEg-2y-49N"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="YWR-HO-PDd">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="13f-6d-xor" customClass="ContainerViewController" customModule="VisualEffectViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pBz-p9-9ZD"/>
+                        <viewControllerLayoutGuide type="bottom" id="XSx-pe-Rrg"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wO8-tq-P8V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBn-Yo-QDK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9GM-Ce-yeH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vsM-V3-5Ci">
+                                            <rect key="frame" x="170" y="82" width="260" height="29"/>
+                                            <segments>
+                                                <segment title="Scale To Fill"/>
+                                                <segment title="Aspect Fit"/>
+                                                <segment title="Aspect Fill"/>
+                                            </segments>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="13f-6d-xor" eventType="valueChanged" id="MbS-Rb-Uh1"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Image View Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqt-Ua-2y3">
+                                            <rect key="frame" x="231" y="28" width="138" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="vsM-V3-5Ci" secondAttribute="centerX" id="FKP-ap-BAO"/>
+                                        <constraint firstAttribute="centerX" secondItem="aqt-Ua-2y3" secondAttribute="centerX" id="erM-hZ-n5t"/>
+                                        <constraint firstAttribute="bottom" secondItem="vsM-V3-5Ci" secondAttribute="bottom" constant="40" id="vQU-is-JGi"/>
+                                        <constraint firstItem="aqt-Ua-2y3" firstAttribute="top" secondItem="9GM-Ce-yeH" secondAttribute="top" constant="28" id="yqo-8s-AmZ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="pBn-Yo-QDK" firstAttribute="top" secondItem="pBz-p9-9ZD" secondAttribute="bottom" id="F2M-sj-jHA"/>
+                            <constraint firstItem="pBn-Yo-QDK" firstAttribute="leading" secondItem="wO8-tq-P8V" secondAttribute="leadingMargin" constant="-16" id="ZaL-zX-mVI"/>
+                            <constraint firstItem="XSx-pe-Rrg" firstAttribute="top" secondItem="pBn-Yo-QDK" secondAttribute="bottom" id="g4c-qw-pTm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBn-Yo-QDK" secondAttribute="trailing" constant="-16" id="vrt-TU-jzk"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJL-lX-8Ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arry_sozai_0014" width="510" height="723"/>
+    </resources>
+</document>
